@@ -1,0 +1,3 @@
+[submodule "HI-latex"]
+	path = HI-latex
+	url = git@github.com:tungufoss/hi-latex-slides.git
