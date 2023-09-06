@@ -1,0 +1,277 @@
+\documentclass[
+    NAME={Dr. Helga Ingimundardóttir},
+    EMAIL={helgaingim@hi.is},
+    FACULTY={Industrial Engineering},
+    TITLE={Linear Optimization},
+    SUBTITLE={Fundamentals and Applications},
+    SEMINAR={VÉL113F},
+    DATE={Design and Optimization}
+]{HI-latex/hi-beamer}
+
+\begin{document}
+
+    \begin{frame}[allowframebreaks]{Operations Research Overview}
+        \begin{itemize}
+            \item Operations Research (OR) aims to determine the most efficient way to perform tasks within companies or
+            institutions.
+            \item It often involves decision-making where complex issues are presented as optimization problems.
+            \item The solution to these problems usually lies in maximizing or minimizing a specific function, known as
+            the \emph{objective function}.
+            \item OR is an interdisciplinary field combining elements of applied mathematics, statistics, probability
+            theory, computer science, and more.
+            \item A primary focus within OR is on model creation and optimization.
+            \item Its historical roots trace back to World War II, emphasizing its significance in practical applications,
+            especially in resource allocation.
+        \end{itemize}
+
+        \framebreak
+
+        \begin{block}{Process}
+            \begin{enumerate}
+                \item Problem definition and data collection.
+                \item Develop a mathematical model that captures the essence of the subject.
+                \item Develop a computer program to work with the model.
+                \item Test (verify) the model. Improve the model if necessary.
+                \item Implement the model -- usually in the form of a program.
+            \end{enumerate}
+        \end{block}
+
+        \framebreak
+
+        \begin{block}{Mathematical Model}
+            Mimics the most crucial aspects of the task.
+            \begin{enumerate}
+                \item What decisions need to be made?
+                \item What are the options?
+                \item What is the outcome (the gain)?
+                \item What are the conditions for good decision making?
+                \item Which factors influence the decision?
+                \item How can we ensure that we've made the right decision?
+            \end{enumerate}
+        \end{block}
+
+        \begin{block}{Linear Optimization / Linear Programming}
+            It's a technique used to find the best possible outcome in a model where the conditions are expressed through
+            \emph{linear} equations and inequalities.
+        \end{block}
+
+    \end{frame}
+
+    \begin{frame}[allowframebreaks]{Beer Substitute Optimization Formulation}
+        \label{example:beer:model}
+        \begin{example}[Old Exam Question]
+            Before beer was legalized in Iceland, a beer substitute was in demand. Now, imagine a brewery's challenge to recreate
+            it. The mix must contain 3-5\% malt, a minimum of 2\% brandy, no more than 7\% vodka, and a hard liquor cap of 10\% to
+            avoid an overpowering spirit taste.
+
+            \begin{table}[h]
+                \centering
+                \scriptsize
+                \begin{tabular}{|l|c|c|}
+                    \hline
+                    \textbf{Ingredient} & \textbf{Alcohol \%} & \textbf{Cost (kr. per liter)} \\
+                    \hline
+                    Pilsner             & 2.25\%              & 100                           \\
+                    Vodka               & 40\%                & 2000                          \\
+                    Brandy              & 40\%                & 3000                          \\
+                    Malt Extract        & 1.5\%               & 120                           \\
+                    \hline
+                \end{tabular}
+            \end{table}
+
+            \begin{enumerate}
+                \item Develop a linear optimization for the strongest (tasty) beer substitute.
+                \item Design one for a cost-effective 4\% beer substitute.
+            \end{enumerate}
+        \end{example}
+    \end{frame}
+
+
+    \begin{frame}{Mathematical Optimization Model}
+        \frametitle{Key Components}
+        \begin{itemize}
+            \item Decision Variables
+            \item Objective Function
+            \item Constraints
+        \end{itemize}
+        \bigskip
+        Extensive data collection is needed to estimate the model's parameters.
+        \emph{Sensitivity analysis} evaluates the effects of changes in individual parameters.
+        If the model is significantly sensitive to certain parameters, extra care is needed in their estimation.
+        \emph{Stochastic programming} formally handles uncertainties in the parameters.
+    \end{frame}
+
+    \begin{frame}{Types of Models}
+        \begin{itemize}
+            \item Decision variables can be continuous, discrete, or both.
+            \item Objective function can have one or more min/max values.
+            \item Constraints can be linear or nonlinear.
+        \end{itemize}
+        \bigskip
+        For now we will focus on models with continuous variables, linear objectives, and linear constraints (i.e. \emph{linear
+        optimization}). We will also look at so-called integer optimization (decision variables take values \(0,1,2,\ldots\)).
+    \end{frame}
+
+    \begin{frame}[allowframebreaks]{Classification of Optimization Problems}
+        \begin{itemize}
+            \item Continuous Decision Variables
+            \begin{itemize}
+                \item Unconstrained
+                \begin{itemize}
+                    \item Nonlinear equations
+                    \item Least squares method
+                    \item Global optimization
+                    \item Non-differentiable optimization
+                \end{itemize}
+                \item Constrained
+                \begin{itemize}
+                    \item \emph{Linear Programming}
+                    \item Semidefinite programming
+                    \item Nonlinearly constrained
+                    \item Bound constraints
+                    \item Network Optimization
+                \end{itemize}
+            \end{itemize}
+            \item Discrete Decision Variables
+            \begin{itemize}
+                \item \emph{Integer Programming}
+                \item Stochastic programming
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[allowframebreaks]{Solving LP: The Simplex Method}
+        Introduction:
+        \begin{itemize}
+            \item Developed by George Dantzig in 1947.
+            \item A popular algorithm for numerical solution of linear programming problems.
+            \item Works by moving along edges of the feasible region defined by the constraints to find the optimal solution.
+            \item Utilizes the fact that the optimal solution lies at a vertex of the feasible region.
+            \item Efficient for large-scale linear problems.
+        \end{itemize}
+        \framebreak
+        Advantages:
+        \begin{itemize}
+            \item Highly systematic and provides a lot of information about the problem structure.
+            \item Can handle additional constraints easily.
+        \end{itemize}
+        Challenges:
+        \begin{itemize}
+            \item May face issues like cycling (though rare with anti-cycling rules).
+            \item May not be as efficient for some nonlinear problems.
+        \end{itemize}
+
+        \begin{block}{Resources}
+            \begin{itemize}
+                \item For guidance on using the Simplex method, refer to the video \href{https://www.youtube.com/watch?v=TVbLWxN8q7I}{How to use the simplex method} by StudyForce.
+                \item For the algorithm details, check \href{https://en.wikipedia.org/wiki/Simplex_algorithm}{Wikipedia's page on the Simplex Algorithm}.
+            \end{itemize}
+        \end{block}
+
+        \framebreak
+
+        \begin{block}{Layman's Explanation}
+            \note{Imagine you're a drone flying above a landscape. This landscape is like a big piece of paper with
+            several lines drawn on it, representing the constraints of a problem. Where the lines intersect, they
+            form various polygons - triangles, rectangles, and so on. Your job as the drone is to find the highest
+            point (or the lowest, depending on the problem) on this landscape, but you can only land on the edges of
+            these polygons.
+
+            However, you have a trick up your sleeve! Instead of searching aimlessly, you always start at one corner
+            of a polygon (a vertex). From there, you 'walk' along the edges, moving from vertex to vertex, always
+            choosing the next edge that takes you higher (or lower). It's as if you're hiking and always taking the
+            path that looks like it leads to a higher peak.
+
+            The genius of the Simplex algorithm is that it knows, due to the structure of these problems, that the
+            highest (or lowest) point will always be at a corner, or vertex. So, it doesn't waste time checking the
+            middle of the edges or the areas inside the polygon.
+
+            As you continue moving from vertex to vertex, there might come a time when all paths around you would
+            take you downwards. When that happens, you know you're at the highest peak in your vicinity. And because
+            of the nature of the problems the Simplex algorithm solves, this means you're at the highest point
+            overall!
+
+            So, in essence, the Simplex algorithm is like a very efficient hiker or drone that always knows the best
+            path to take to reach the highest (or lowest) point on a constrained landscape. It never wastes time on
+            pointless paths and always goes straight for the goal.
+            }
+
+            Imagine you're a drone over a land with marked paths. Your task is to find the highest point. Instead of
+            searching randomly:
+
+            \begin{itemize}
+                \item You start at a corner (vertex) of a path.
+                \item You 'fly' from corner to corner, always choosing the path leading upwards.
+                \item You know the highest point is at a corner due to the problem's structure.
+                \item Once all paths around you lead downwards, you've found the highest spot!
+            \end{itemize}
+
+            In essence, Simplex is like a savvy drone finding the best peak on a constrained landscape.
+        \end{block}
+    \end{frame}
+
+    \begin{frame}[allowframebreaks]{Beer Substitute Optimization with Simplex}
+        \label{example:beer:simplex}
+        \begin{example}[Continued from \hyperlink{example:beer:model}{Optimization Formulation}]
+            Now, use the Simplex method to solve:
+            \begin{enumerate}
+                \item Find the linear optimization solution for the strongest (yet tasty) beer substitute.
+                \item Determine the solution for a cost-effective 4\% beer substitute.
+            \end{enumerate}
+        \end{example}
+
+        \begin{alertblock}{Note}
+            Remember to set up the problem with the appropriate decision variables, constraints, and objective function
+            before applying the Simplex algorithm.
+        \end{alertblock}
+
+    \end{frame}
+
+    \begin{frame}{Solving LP: A Computational Approach}
+        \begin{itemize}
+            \item What is \emph{Gurobi}?
+            \begin{itemize}
+                \item Gurobi is a state-of-the-art optimization solver.
+                \item It efficiently handles linear, quadratic, and mixed-integer optimization problems.
+            \end{itemize}
+
+            \item \emph{Language Integration:}
+            \begin{itemize}
+                \item Supports various languages, notably C++ and Python.
+                \item For our purposes, we'll utilize the \emph{Python} implementation (pip package \texttt{gurobipy}).
+            \end{itemize}
+
+            \item \emph{Licensing:}
+            \begin{itemize}
+                \item Gurobi offers a free academic license.
+                \item \alert{Important:} To register for the license, ensure you are connected to the university's network.
+            \end{itemize}
+
+            \item \emph{Resources:}
+            \begin{itemize}
+                \item Gurobi provides extensive resources for learners.
+                \item Tutorials range from \href{https://www.gurobi.com/jupyter_models/}{introductory to advanced models}.
+                \item All tutorials are hosted in Jupyter Notebooks, facilitating hands-on learning.
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{frame}
+
+    \begin{frame}[allowframebreaks]{Beer Substitute Optimization with Gurobi}
+        \label{example:beer:guriobi}
+        \begin{example}[Continued from \hyperlink{example:beer:model}{Optimization Formulation}]
+            Now, use the Gurobi method to solve:
+            \begin{enumerate}
+                \item Find the linear optimization solution for the strongest (yet tasty) beer substitute.
+                \item Determine the solution for a cost-effective 4\% beer substitute.
+            \end{enumerate}
+        \end{example}
+
+        \begin{alertblock}{Note}
+            Compare the results from the Simplex method and Gurobi. Are they the same? If not, why?
+        \end{alertblock}
+
+    \end{frame}
+
+\end{document}

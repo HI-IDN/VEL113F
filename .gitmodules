@@ -1,3 +1,6 @@
 [submodule "HI-latex"]
 	path = HI-latex
 	url = git@github.com:tungufoss/hi-latex-slides.git
+[submodule "ClassicalMethods/IDN401G"]
+	path = ClassicalMethods/IDN401G
+	url = git@github.com:HI-IDN/IDN401G-2012
