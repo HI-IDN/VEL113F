@@ -7,3 +7,10 @@
 \newcommand{\ei}{\end{itemize}}
 
 \usepackage{IEEEtrantools}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% use mathbf instead of vec
+\renewcommand{\vec}[1]{\ifmmode\text{\boldmath$#1$}\else\textbf{#1}\fi}
+\newcommand{\mat}[1]{\mathbf{#1}}
