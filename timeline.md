@@ -6,6 +6,11 @@ I wanted to inform you that starting next week, I will be taking over the lectur
 focus will shift to classical methods, and we will start with linear programming and mathematical
 modeling.
 
+For the next 3 weeks, classes will be held on **Tuesdays as normal from 10:00-12:30 in VR2-262** but
+**not on Thursdays** due to scheduling conflicts. Instead, classes will be held on **Wednesdays at
+8:20-9:50 in VR2-Langholt** (the conference room next to the teachers' lounge). After this, the
+schedule will return to normal with Magnús Þór.
+
 For the upcoming classes, I will be implementing a pedagogical approach known as Team-Based
 Learning (TBL). Here's a brief explanation of how TBL works, especially the terms iRAT and tRAT:
 
@@ -16,23 +21,12 @@ Learning (TBL). Here's a brief explanation of how TBL works, especially the term
   designated teams to discuss and answer the same set of questions collaboratively. This fosters
   teamwork and promotes deeper understanding as team members teach and learn from each other.
 
-For the smooth execution of TBL, I have already split the class into two randomised groups. During
-our session, we will engage in several iRAT/tRAT exercises centered around linear programming.
+To ensure you're fully prepared, please install Gurobi and acquire a free academic license before
+the next session. I've uploaded slides for linear programming under the Classical Methods module.
+These slides contain examples that will help you anticipate the kinds of questions you'll face
+during iRAT/tRAT. I also recommend watching the video linked in the slides on the simplex method.
 
-To better prepare you, I've put the slides we will be using during our lecture under the Classical
-Methods module. These slides contain examples which will give you a clear picture of the kind of
-questions you can expect during the iRAT/tRAT. While I aim to cover as much as we can, we might not
-get through all three assignments on Tuesday. However, I strongly suggest you watch the video (the
-link is in the slides) on the simplex method, ensuring you understand the process.
-
-Lastly, our work will involve using Gurobi, a powerful optimization software. Please make sure to
-install Gurobi on your machines and acquire a free academic license prior to our next session. I
-also recommend exploring their online resources and examples to ensure your setup works without
-hitches.
-
-Let's make the most of this learning experience and see you next week!
-
-### Week 4
+### Week 10
 
 To ensure you're fully prepared for our upcoming class:
 
@@ -50,12 +44,12 @@ To ensure you're fully prepared for our upcoming class:
 - Slides on [Linear Programming](./ClassicalMethods/LinearOptimization.pdf)
 - TBL (iRAT/tRAT) on Linear Programming
 
-#### Reminder for Thursday lecture
+#### Reminder for Wednesday lecture
 
-I'd like to clarify a few key aspects regarding the homework for next Thursday class and offer some
-reminders:
+I'd like to clarify a few key aspects regarding the homework for next Wednesday's class and offer
+some reminders:
 
-- **Gurobi iRAT**: Kindly complete the Gurobi iRAT by Thursday morning. This foundational task will
+- **Gurobi iRAT**: Kindly complete the Gurobi iRAT by Wednesday morning. This foundational task will
   be a springboard for our subsequent class activities.
 - **tRAT Discussion**: We'll start our session by comparing notes on the Gurobi iRAT and diving into
   the tRAT collaboratively. This should take no more than 5 minutes, so make sure to be on time.
@@ -73,13 +67,13 @@ reminders:
 Your active participation and insightful contributions will make this class both fun and productive.
 I'm eager to hear your pitches and engage in meaningful dialogues.
 
-#### Thursday lecture
+#### Wednesday lecture
 
 - Elevator Pitch Session and Voting
 - Slides on [Mixed Integer Programming](./ClassicalMethods/MixedIntegerProgramming.pdf)
 - TBL (iRAT/tRAT) on Gurobi
 
-### Week 5
+### Week 11
 
 #### Getting Started with GitHub Classroom
 
@@ -88,11 +82,11 @@ I'm eager to hear your pitches and engage in meaningful dialogues.
    recommend using your hi-email as your primary or alternate email address.
 
 2. **Accept the Classroom Invitation**:
-   Click on the following invitation [link](https://classroom.github.com/a/MGGzHW9z). to join the
+   Click on the following invitation [link](https://classroom.github.com/a/MGGzHW9z) to join the
    class. This will give you access to the assignment repository.
 
 3. **Data Submission**:
-   By our next class on Tuesday, it's imperative that those of you who volunteered for data
+   By our next class on **Tuesday**, it's imperative that those of you who volunteered for data
    acquisition have your data ready and submitted to your GitHub repositories. This will ensure that
    we have a smooth and productive session.
 
@@ -138,11 +132,14 @@ aspect, don't hesitate to reach out.
 Here's to a productive and enlightening assignment experience!
 
 #### Tuesday lecture
+
 - Slides on [Local Global Optimization](./ClassicalMethods/LocalGlobalOptimization.pdf)
-#### Thursday lecture
+
+#### Wednesday lecture
+
 - Slides on [Non-Linear Optimization](./ClassicalMethods/NonLinearOptimization.pdf)
 
-### Week 6
+### Week 12
 
 A few important points for the final assignment:
 
@@ -153,6 +150,11 @@ A few important points for the final assignment:
   that file by submitting it to the designated assignment section on Canvas.
 - **Solution Review**: After receiving all reports, I will thoroughly review them. Once this process
   is complete, I will publish my solution on Canvas for your reference.
+- **Peer Evaluation Form**: Along with the final report, each student must submit a peer evaluation
+  form for their team members. You will evaluate your team members' contributions using the
+  percentage method, and the final grade will be scaled based on these evaluations. It's important
+  to reflect on your teammates' contributions honestly, as this will directly impact their
+  individual grades.
 
 Lastly, it is my hope that, after this module, you feel more comfortable creating linear models.
 Always remember that the foundation of a good implementation begins with a clear model. As you
@@ -160,11 +162,16 @@ progress in your endeavors, prioritize modeling first and coding next. This appr
 streamlines the development process but also helps in quickly identifying any potential issues in
 your code implementation.
 
-Thank you for being an active part of this module. I look forward to seeing your reports. Best of
-luck in your future projects.
+Thank you for being an active part of this module. I look forward to seeing your reports and peer
+evaluations. Best of luck in your future projects.
 
 #### Tuesday lecture
+
 - Preparation for the final MIP assignment
 
-#### Thursday lecture
+#### Wednesday lecture
+
 - Presentation of MIP Assignment Reports
+- Submission of Peer Evaluation Forms
+
+
